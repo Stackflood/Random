@@ -1,6 +1,4 @@
-
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -86,6 +84,7 @@ body {
       DOMStrings,
       displayApplePayButton: function () {
         document.getElementById(DOMStrings.appleButton).style.display = 'block'
+        document.getElementById(DOMStrings.appleButton).onclick = _setButtonClickListener
       },
       hideApplePayButton: function () {
         document.getElementById(DOMStrings.appleButton).style.display = 'none'
@@ -332,6 +331,8 @@ body {
      * begin the Apple Pay session with your configuration
      */
     var _setButtonClickListener = function () {
+      Alert.alert("Inside onClick Listener")
+      //console.log()
       document
         .getElementById(uiController.DOMStrings.appleButton)
         .addEventListener('click', function () {
@@ -390,4 +391,3 @@ body {
 </body>
 
 </html>
-
